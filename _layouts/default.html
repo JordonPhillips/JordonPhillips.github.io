@@ -8,24 +8,32 @@
 
         <!-- syntax highlighting CSS -->
         <link rel="stylesheet" href="/css/syntax.css">
+		
+		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+		
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.css">
-
-        <link rel="stylesheet" href="/css/bootstrap.min.css">
     </head>
     <body>
-      <div class="navbar navbar-fixed-top">
+      <div class="navbar navbar-static-top">
         <div class="container">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
 
-          <a class="navbar-brand" href="#">Title</a>
+          <a class="navbar-brand" href="{{ site.url }}/">Jordon Phillips</a>
 
           <div class="nav-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="{{ site.url }}/blog">Blog</a></li>
+              <li><a href="{{ site.url }}/about">About</a></li>
+              <li><a href="{{ site.url }}/archives">Archives</a></li>
+            </ul>
           </div><!-- /.nav-collapse -->
         </div>
       </div>
