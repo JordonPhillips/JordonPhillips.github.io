@@ -4,7 +4,7 @@ pygments: true
 safe: true
 future: false
 lsi: true
-permalink: pretty
+permalink: /:title
 
 paginate: 5
 paginate_path: "page:num"
