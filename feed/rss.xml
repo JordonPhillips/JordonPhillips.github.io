@@ -11,18 +11,18 @@ title : RSS Feed
     <category><![CDATA[{{ site.category }}]]></category>
     <copyright><![CDATA[{{ site.copyright }}]]></copyright>
     <language>en-us</language>
-    <link>{{ site.production_url }}/feed/rss</link>
-    <lastBuildDate>{{ site.time | date_to_xmlschema }}</lastBuildDate>
-    <pubDate>{{ site.time | date_to_xmlschema }}</pubDate>
+    <link>http://{{ site.production_url }}/feed/rss</link>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <ttl>1800</ttl>
 
     {% for post in site.posts %}
       <item>
         <title><![CDATA[{{ post.title }}]]></title>
         <description><![CDATA[{{ post.content | xml_escape }}]]></description>
-        <link>{{ site.production_url }}{{ post.url }}</link>
+        <link>http://{{ site.production_url }}{{ post.url }}</link>
         <guid>{{ site.production_url }}{{ post.id }}</guid>
-        <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
+        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
       </item>
     {% endfor %}
   </channel>
