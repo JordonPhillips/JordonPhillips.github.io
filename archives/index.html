@@ -3,4 +3,43 @@ layout: default
 title: Archives
 ---
 
-archives
+<div class="page-header">
+  <h1>Archives</h1>
+</div>
+
+{% for post in site.posts %}
+  {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
+
+  {% if forloop.first %}
+    {% assign old_year = year %}
+    <div class="row">
+      <div class="col-lg-1 hidden-sm">
+        <h2>{{ year }}</h2>      </div>
+      <div class="col-lg-11">
+  {% elsif year == old_year %}
+    <hr/>
+  {% endif %}
+
+  {% unless year == old_year %}
+      </div>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col-lg-1 hidden-sm">
+        <h2>{{ year }}</h2>
+      </div>
+      <div class="col-lg-11">
+  {% endunless %}
+
+  <div class="row">
+    <div class="col-lg-11 col-lg-push-1">
+      <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+    </div>
+    <div class="col-lg-1 col-lg-pull-11">
+      <h4>{{ post.date | date: "%b %d" }}</h4>
+    </div>
+    
+  </div>
+
+  {% assign old_year = year %}
+{% endfor %}
