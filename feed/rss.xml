@@ -6,10 +6,10 @@ title : RSS Feed
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
   <channel>
-    <title>{{ site.title }}</title>
-    <description>{{ site.description }}</description>
-    <category>{{ site.category }}</category>
-    <copyright>{{ site.copyright }}</copyright>
+    <title><![CDATA[{{ site.title }}]]></title>
+    <description><![CDATA[{{ site.description }}]]></description>
+    <category><![CDATA[{{ site.category }}]]></category>
+    <copyright><![CDATA[{{ site.copyright }}]]></copyright>
     <language>en-us</language>
     <link>{{ site.production_url }}/feed/rss</link>
     <lastBuildDate>{{ site.time | date_to_xmlschema }}</lastBuildDate>
@@ -18,8 +18,8 @@ title : RSS Feed
 
     {% for post in site.posts %}
       <item>
-        <title>{{ post.title }}</title>
-        <description>{{ post.content | xml_escape }}</description>
+        <title><![CDATA[{{ post.title }}]]></title>
+        <description><![CDATA[{{ post.content | xml_escape }}]]></description>
         <link>{{ site.production_url }}{{ post.url }}</link>
         <guid>{{ site.production_url }}{{ post.id }}</guid>
         <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
