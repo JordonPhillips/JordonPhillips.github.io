@@ -6,7 +6,7 @@
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/assets/stylesheets/syntax.css">
     
     <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 
@@ -15,7 +15,7 @@
 
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="/css/misc.css">
+    <link rel="stylesheet" href="/assets/stylesheets/misc.css">
   </head>
   
   <body>
@@ -39,11 +39,8 @@
             <li><a href="{{ site.url }}/archives">Archives</a></li>
           </ul>
 
-          <ul class="nav navbar-nav pull-right">
-            <li><a href="https://github.com/JordonPhillips"><i class="icon-github"></a></i></li>
-            <li><a href="https://twitter.com/Jordon_Phillips"><i class="icon-twitter"></a></i></li>
-            <li><a href="mailto:jordon@jordonphillips.com"><i class="icon-envelope"></a></i></li>
-            <li><a href="{{ site.url }}/feed/rss.xml"><i class="icon-rss"></i></a></li>
+          <ul class="nav navbar-nav pull-right visible-md visible-lg">
+            {% include contact.html %}
           </ul>
         </div>
       </div>
@@ -53,6 +50,9 @@
       <div class="row">
         <div class="col-sm-12">
           {{ content }}
+        </div>
+        <div class="nav nav-pills col-sm-12 hidden-md hidden-lg">
+          {% include contact.html %}
         </div>
       </div>
     </div>

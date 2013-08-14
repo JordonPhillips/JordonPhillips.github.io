@@ -1,0 +1,42 @@
+body {
+	background-image:url('/assets/images/furley_bg.png');
+	background-repeat:repeat;
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.page-header {
+	margin: 20px 0 20px;
+	border: 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.nav-pills > li > a {
+  color: #777777;
+}
+.nav-pills > li > a:hover,
+.nav-pills > li > a:focus {
+  color: #333333;
+  background-color: transparent;
+}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: #333333;
+  background-color: transparent;
+}
+.nav-pills > .active > a,
+.nav-pills > .active > a:hover,
+.nav-pills > .active > a:focus {
+  color: #555555;
+  background-color: #d5d5d5;
+}
+.nav-pills > .disabled > a,
+.nav-pills > .disabled > a:hover,
+.nav-pills > .disabled > a:focus {
+  color: #cccccc;
+  background-color: transparent;
+}
