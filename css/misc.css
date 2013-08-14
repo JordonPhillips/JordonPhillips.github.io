@@ -1,0 +1,15 @@
+body {
+	background-image:url('/assets/images/furley_bg.png');
+	background-repeat:repeat;
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.page-header {
+	margin: 20px 0 20px;
+	border: 0;
+    border-bottom: 1px dashed #ccc;
+}
