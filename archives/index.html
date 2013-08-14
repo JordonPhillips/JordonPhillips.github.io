@@ -13,7 +13,7 @@ title: Archives
   {% if forloop.first %}
     {% assign old_year = year %}
     <div class="row">
-      <div class="col-lg-1 hidden-sm">
+      <div class="col-lg-1 hidden-sm hidden-xs">
         <h2>{{ year }}</h2>      </div>
       <div class="col-lg-11">
   {% elsif year == old_year %}
@@ -25,7 +25,7 @@ title: Archives
     </div>
     <hr/>
     <div class="row">
-      <div class="col-lg-1 hidden-sm">
+      <div class="col-lg-1 hidden-sm hidden-xs">
         <h2>{{ year }}</h2>
       </div>
       <div class="col-lg-11">
