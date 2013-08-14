@@ -12,28 +12,39 @@
 
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/css/bootstrap.min.css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/js/bootstrap.min.js"></script>
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   </head>
   
   <body>
-    <div class="navbar navbar-static-top">
+    <nav class="navbar navbar-static-top" role="navigation">
       <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+        <div class="navbar-header">
 
-        <a class="navbar-brand" href="{{ site.url }}/">Jordon Phillips</a>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand" href="{{ site.url }}/">Jordon Phillips</a>
+        </div>
 
         <div class="nav-collapse collapse navbar-responsive-collapse">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav navbar-left">
             <li><a href="{{ site.url }}/">Blog</a></li>
             <li><a href="{{ site.url }}/about">About</a></li>
             <li><a href="{{ site.url }}/archives">Archives</a></li>
           </ul>
+
+          <ul class="nav navbar-nav pull-right">
+            <li><a href="https://github.com/JordonPhillips"><i class="icon-github"></a></i></li>
+            <li><a href="https://twitter.com/Jordon_Phillips"><i class="icon-twitter"></a></i></li>
+            <li><a href="mailto:jordon@jordonphillips.com"><i class="icon-envelope"></a></i></li>
+          </ul>
         </div>
       </div>
-    </div>
+    </nav>
 
     <div class="container">
       <div class="row">
