@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /404.html
+Disallow: /feed/atom.xml
+Disallow: /feed/rss.xml
