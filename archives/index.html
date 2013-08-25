@@ -17,9 +17,9 @@ sitemap:
   {% if forloop.first %}
     {% assign old_year = year %}
     <div class="row">
-      <div class="col-lg-1 hidden-sm hidden-xs">
+      <div class="col-sm-1 hidden-xs hidden-sm">
         <h2>{{ year }}</h2>      </div>
-      <div class="col-lg-11">
+      <div class="col-sm-11">
   {% elsif year == old_year %}
     <hr/>
   {% endif %}
@@ -29,16 +29,16 @@ sitemap:
     </div>
     <hr/>
     <div class="row">
-      <div class="col-lg-1 hidden-sm hidden-xs">
+      <div class="col-sm-1 hidden-xs">
         <h2>{{ year }}</h2>
       </div>
-      <div class="col-lg-11">
+      <div class="col-sm-11">
   {% endunless %}
 
   <div class="row">
-    <div class="col-lg-11 col-lg-push-1">
+    <div class="col-sm-11 col-sm-push-1">
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-sm-12">
           <h4>
             <a href="{{ post.url }}">{{ post.title }}</a>
             <br/>
@@ -47,10 +47,10 @@ sitemap:
         </div>
       </div>
     </div>
-    <div class="col-lg-1 col-lg-pull-11">
+    <div class="col-sm-1 col-sm-pull-11">
       <h4>{{ post.date | date: "%b %d" }}</h4>
     </div>
-    
+
   </div>
 
   {% assign old_year = year %}
